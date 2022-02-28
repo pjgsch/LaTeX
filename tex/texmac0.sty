@@ -1,0 +1,272 @@
+%**********************************************************************
+% <inf> tex : macros for LaTeX
+%**********************************************************************
+%  This is a set of LaTeX macros, defined by Piet Schreurs.
+%  Feel free to use them and change them as you please.
+%  Demo-files are available in '/users/wfw2/piet/tex/demos/'.
+%======================================================================
+\newcommand{\BDO}{\begin{document}}
+\newcommand{\EDO}{\end{document}}           
+\newcommand{\DEL}[1]{}                      % comment
+\newcommand{\COM}[1]{}                      % comment
+%\newcommand{\UTW}[1]{}                      % uitwerking
+\newcommand{\MLF}[2]{{}{}}                  % Matlab code
+%======================================================================
+%  measures and counters
+%======================================================================
+\newlength{\loclen}         \setlength{\loclen}{0mm}
+\newlength{\initopsep}      \setlength{\initopsep}{\topsep}
+\newlength{\PSA}            \setlength{\PSA}{0.0125in}
+\newlength{\PSB}            \setlength{\PSB}{0.00087489in}
+\newlength{\PSC}            \setlength{\PSC}{0.00083333in}
+\newlength{\PSAO}           \setlength{\PSAO}{\PSA}
+\newlength{\PSBO}           \setlength{\PSBO}{\PSB}
+\newlength{\PSCO}           \setlength{\PSCO}{\PSC}
+\newlength{\DEFfboxsep}     \setlength{\DEFfboxsep}{\fboxsep}
+\newcounter{fignum}         \setcounter{fignum}{0}
+\newcounter{tabnum}         \setcounter{tabnum}{0}
+\newcommand{\headfontsize}{\normalsize}
+\newcommand{\picfontsize}{\normalsize}
+\newcommand{\txtfontsize}{\normalsize}
+\newcommand{\shtfontsize}{\huge}
+\newcommand{\IND}{\mbox{}\hspace*{5ex}}
+%======================================================================
+%  spaces 
+%======================================================================
+\newcommand{\SA}{\mbox{\hspace{\bigskipamount}}} 
+\newcommand{\SB}{\SA\SA}                    \newcommand{\SC}{\SA\SA\SA} 
+\newcommand{\SD}{\SB\SB}                    \newcommand{\SE}{\SB\SB\SA}
+%======================================================================
+%  items
+%======================================================================
+\newcommand{\ITM}{\item}                         % [label]
+\newcommand{\ITL}[1]{\item[#1\hfill]}            % {label}
+\newcommand{\ITR}[1]{\item[#1]}                  % {label}
+\newcommand{\ITC}[1]{\item[#1\hfil]}             % {label}
+%======================================================================
+%  indentation left and right
+%======================================================================
+\newcommand{\BIN}[2]%                             % {left-in}{right-in}
+ { \begin{list} {}
+ { \setlength{\topsep}{0ex}
+   \setlength{\partopsep}{0ex}
+   \setlength{\itemsep}{0ex}
+   \setlength{\parsep}{0ex}
+%  \setlength{\labelwidth}{#1mm}
+%  \settowidth{\labelwidth}{#1}
+   \setlength{\labelsep}{3ex}
+   \setlength{\leftmargin}{#1mm} 
+%   \addtolength{\leftmargin}{\labelsep}
+   \setlength{\rightmargin}{#2mm}
+ } \setlength{\topsep}{\initopsep} \item[] }
+\newcommand{\EIN}{\end{list}}
+\newcommand{\BIL}[1]%                             % {label}
+ { \begin{list} {}
+ { \setlength{\topsep}{0ex}
+   \setlength{\partopsep}{0ex}
+   \setlength{\itemsep}{0ex}
+   \setlength{\parsep}{0ex}
+%  \setlength{\labelwidth}{#1mm}
+   \settowidth{\labelwidth}{#1}
+   \setlength{\labelsep}{3ex}
+   \setlength{\leftmargin}{\labelwidth}
+   \addtolength{\leftmargin}{\labelsep}
+%  \setlength{\leftmargin}{2cm}
+%  \setlength{\leftmargin}{\labelsep}
+   \setlength{\rightmargin}{0ex}
+ } \setlength{\topsep}{\initopsep} }
+\newcommand{\EIL}{\end{list}}
+%======================================================================
+%  mathematical environments
+%======================================================================
+\newcommand{\BEA}%
+ {\mbox{}\\\vspace*{-1.8\baselineskip}\setlength{\arraycolsep}{1.66884pt}\begin{eqnarray*}}
+\newcommand{\EEA}{\end{eqnarray*}\setlength{\arraycolsep}{5.00000pt}}
+\newcommand{\BAE}%
+ {\mbox{}\\\vspace*{-1.8\baselineskip}\setlength{\arraycolsep}{0pt}\begin{eqnarray*}&&}
+\newcommand{\EAE}{\end{eqnarray*}\setlength{\arraycolsep}{5.00000pt}}
+\newcommand{\MBX}[3]%   =========== Matrix in \mbox
+ {\mbox{\(\ds%
+ \renewcommand{\arraystretch}{#1}\setlength{\arraycolsep}{0.2ex}%
+ \begin{array}[#2]{@{}lllllllllllllllllllllllllllll}\ds #3 \end{array}\)}%\!\!\)}
+}%%%%%% Usage : \MBX{arraystretch}{t(op)/b(ottom)}{array-contents}
+\newcommand{\BMA}%
+ {\left[ \setlength{\arraycolsep}{5.00000pt} \begin{array}}%
+\newcommand{\EMA}{\end{array} \right]}%
+%======================================================================
+%  mathematical symbols
+%======================================================================
+\newcommand{\U}[1]{\underline{#1}}
+\newcommand{\UU}[1]{\underline{\underline{#1}}}
+\newcommand{\B}{\bar}
+\newcommand{\D}{\dot}
+\newcommand{\DD}{\ddot}
+\newcommand{\V}{\vec}
+\def\W#1{\oalign{$#1$\crcr\hidewidth
+    \vbox to.2ex{\hbox{\rm\char"7E}\vss}\hidewidth}}
+\newcommand{\WW}[1]{\W{\W{#1}}}
+\newcommand{\I}{\,\bm{\cdot}\,}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\f}[2]{{\textstyle \frac{#1}{#2}}}
+\newcommand{\bm}[1]{\mbox{\boldmath \(#1\)}}
+\newcommand{\N}{\nabla}
+\newcommand{\A}{\mbox{$\ast$}}
+\newcommand{\sign}{\mbox{ sign}}
+\newcommand{\rot}{\mbox{rot}}
+\newcommand{\tr}{\mbox{tr}}
+\newcommand{\im}{\mbox{Im}}
+\newcommand{\re}{\mbox{Re}}
+\newcommand{\erf}{\mbox{erf}}
+\newcommand{\var}{\mbox{var}}
+\newcommand{\cov}{\mbox{cov}}
+\newcommand{\fo}[1]{\,{^4 {\bm{#1}}}}
+\newcommand{\Tr}[1]{{\stackrel{\mbox{\tiny  $\bm{\bigtriangledown}$}}{#1}}}
+\newcommand{\Cr}[1]{{\stackrel{\mbox{\small  $\bm{\bigtriangleup}$}}{#1}}}
+\newcommand{\Jr}[1]{{\stackrel{\mbox{\scriptsize $\bm{\circ}$}}{#1}}}
+%\newcommand{\Or}[1]{{\stackrel{\mbox{\tiny $\bm{\bigodot}$}}{#1}}}
+\newcommand{\Or}[1]{{\stackrel{\mbox{\tiny $\bm{\odot}$}}{#1}}}
+\newcommand{\Br}[1]{{\stackrel{\mbox{\scriptscriptstyle $\bm{\bullet}$}}{#1}}}
+\newcommand{\Dr}[1]{{\stackrel{\mbox{\large $\bm{\diamond}$}}{#1}}}
+%======================================================================
+%  arrows
+%======================================================================
+\newcommand{\Ar} {\mbox{$\rightarrow$}}  
+\newcommand{\AR} {\mbox{$\Rightarrow$}}
+\newcommand{\ArL}{\mbox{$\longrightarrow$}}
+\newcommand{\Al} {\mbox{$\leftarrow$}}       
+\newcommand{\AL} {\mbox{$\Leftarrow$}}
+\newcommand{\AlL}{\mbox{$\longleftarrow$}}
+\newcommand{\Alr}{\mbox{$\leftrightarrow$}}  
+\newcommand{\ALR}{\mbox{$\Leftrightarrow$}}
+\newcommand{\Au} {\mbox{$\uparrow$}}         
+\newcommand{\Ad} {\mbox{$\downarrow$}}
+%======================================================================
+%  bold characters
+%======================================================================
+\newcommand{\ba} {\bm{a}}               \newcommand{\bb} {\bm{b}}
+\newcommand{\be} {\bm{e}}               \newcommand{\bff} {\bm{f}}
+\newcommand{\bg} {\bm{g}}               \newcommand{\bh} {\bm{h}}
+\newcommand{\bs} {\bm{s}}               \newcommand{\bt} {\bm{t}}
+\newcommand{\bu} {\bm{u}}           
+\newcommand{\bv} {\bm{v}}               \newcommand{\bw} {\bm{w}}
+\newcommand{\bx} {\bm{x}}               \newcommand{\by} {\bm{y}}
+\newcommand{\bz} {\bm{s}}               
+\newcommand{\bA} {\bm{A}}               \newcommand{\bB} {\bm{B}}
+\newcommand{\bC} {\bm{C}}               \newcommand{\bD} {\bm{D}}
+\newcommand{\bE} {\bm{E}}               \newcommand{\bF} {\bm{F}}
+\newcommand{\bG} {\bm{G}}               \newcommand{\bH} {\bm{H}}
+\newcommand{\bI} {\bm{I}}               \newcommand{\bJ} {\bm{J}}
+\newcommand{\bK} {\bm{K}}               \newcommand{\bL} {\bm{L}}
+\newcommand{\bM} {\bm{M}}               \newcommand{\bN} {\bm{N}}
+\newcommand{\bO} {\bm{O}}               \newcommand{\bP} {\bm{P}}
+\newcommand{\bQ} {\bm{Q}}               \newcommand{\bR} {\bm{R}}
+\newcommand{\bS} {\bm{S}}               \newcommand{\bT} {\bm{T}}
+\newcommand{\bU} {\bm{U}}               \newcommand{\bV} {\bm{V}}
+\newcommand{\bW} {\bm{W}}               \newcommand{\bX} {\bm{X}}
+\newcommand{\bY} {\bm{Y}}               \newcommand{\bZ} {\bm{Z}}
+\newcommand{\bCh}{\hat{\bm{C}}}
+\newcommand{\bDh}{\hat{\bm{D}}}
+\newcommand{\bLh}{\hat{\bm{L}}}
+%======================================================================
+%  Greek characters
+%======================================================================
+\newcommand{\Ga}{\alpha}         \newcommand{\GA}{{\mit A}}
+\newcommand{\Gb}{\beta}          \newcommand{\GB}{{\mit \Beta}}
+\newcommand{\Gg}{\gamma}         \newcommand{\GG}{{\mit \Gamma}}
+\newcommand{\Gd}{\delta}         \newcommand{\GD}{{\mit \Delta}}
+\newcommand{\Ge}{\varepsilon}    \newcommand{\GE}{{\cal E}}
+\newcommand{\Gf}{\phi}           \newcommand{\GF}{{\mit \Phi}}
+\newcommand{\Gh}{\eta}           \newcommand{\GH}{{\mit \Eta}}
+\newcommand{\Gth}{\theta}        \newcommand{\GTh}{{\mit \Theta}}
+\newcommand{\Gk}{\kappa}         \newcommand{\GK}{{\mit \Kappa}}
+\newcommand{\Gl}{\lambda}        \newcommand{\GL}{{\mit \Lambda}}
+\newcommand{\Gm}{\mu}            \newcommand{\GM}{{\mit \Mu}}
+\newcommand{\Gn}{\nu}            \newcommand{\GN}{{\mit \Nu}}
+\newcommand{\Go}{\omega}         \newcommand{\GO}{{\mit \Omega}}
+\newcommand{\Gp}{\pi}            \newcommand{\GP}{{\mit \Pi}}
+\newcommand{\Gr}{\rho}           \newcommand{\GR}{{\mit \Rho}}
+\newcommand{\Gs}{\sigma}         \newcommand{\GS}{{\mit \Sigma}}
+\newcommand{\Gt}{\tau}           \newcommand{\GT}{{\mit \Tau}}
+\newcommand{\Gc}{\chi}           \newcommand{\GC}{\chi} % {\mit \Chi}}
+\newcommand{\Gx}{\xi}            \newcommand{\GX}{{\mit \Xi}}
+\newcommand{\Gy}{\psi}           \newcommand{\GY}{{\mit \Psi}}
+\newcommand{\Gz}{\zeta}          \newcommand{\GZ}{{\mit \Zeta}}
+%======================================================================
+%  bold Greek characters
+%======================================================================
+\newcommand{\bGa}{\bm{\alpha}}      \newcommand{\bGA}{\bm{\mit A}}
+\newcommand{\bGe}{\bm{\varepsilon}} \newcommand{\bGE}{\bm{\cal E}}
+\newcommand{\bGg}{\bm{\gamma}}      \newcommand{\bGG}{\bm{\mit \Gamma}}
+\newcommand{\bGk}{\bm{\kappa}}      \newcommand{\bGK}{\bm{\mit \Kappa}}
+\newcommand{\bGl}{\bm{\lambda}}     \newcommand{\bGL}{\bm{\mit \Lambda}}
+\newcommand{\bGh}{\bm{\eta}}        \newcommand{\bGH}{\bm{\mit \Eta}}
+\newcommand{\bGs}{\bm{\sigma}}      \newcommand{\bGS}{\bm{\mit \Sigma}}
+\newcommand{\bGt}{\bm{\tau}}        \newcommand{\bGT}{\bm{\mit \Tau}}
+\newcommand{\bGo}{\bm{\omega}}      \newcommand{\bGO}{\bm{\mit \Omega}}
+\newcommand{\bGsh}{\hat{\bm{\sigma}}}
+%======================================================================
+%  boxes
+%======================================================================
+\newcommand{\FIT}[1]{%                  % places FIgure-Text
+ %\stepcounter{fignum}%                % increments figure-counter 
+ \mbox{}\\\framebox[\textwidth]%       % framed box off textwidth
+ {\parbox{0.9\textwidth}%
+ {\mbox{}\\%
+ % Fig. \arabic{fignum} : %                           % figure number
+ % Fig. \arabic{section}.\arabic{fignum} : %          % figure number
+ {\em #1} \mbox{}\\[-1ex] }}\\}      % figure text
+\newcommand{\PBT}[2]{\mbox{\parbox[t]{#1}{\mbox{}#2\mbox{}}}}%
+%----------------------------------------------------------------------
+\newcommand{\FBOX}[1]{%
+\setlength{\fboxsep}{1em}\fbox{#1}\setlength{\fboxsep}{\DEFfboxsep}}
+\newcommand{\FBXC}[3]{{%
+\setlength{\fboxsep}{#1}%
+\begin{center}\fbox{\parbox[c][][c]{#2}{\mbox{}#3}}\end{center}}}
+%======================================================================
+%  pictures and figures
+%======================================================================
+\newcommand{\SetMyFont}[3]{}            % used in reprocessed .eepic
+\newcommand{\FIG}[3]{%                  % scaled figure .eepic
+ \setlength{\unitlength}{#1#2}\mbox{} 
+ \begin{center} {\picfontsize #3 } \end{center}\mbox{}}
+\newcommand{\FIGS}[3]{%
+ \setlength{\unitlength}{#1#2}\mbox{} 
+ {\picfontsize #3 }}
+%======================================================================
+%  things which must/may have to be redefined
+%======================================================================
+\newcommand{\INP}[1]{\input #1}
+\newcommand{\TXT}[1]{~\\[-2\baselineskip] #1\mbox{}}   % text
+\newcommand{\BOX}[1]{~\\[-2\baselineskip] #1\mbox{}}   % math
+\newcommand{\FRM}[1]{\frame{#1}}
+\newcommand{\REP}[1]{#1}         % include for 'report' or 'article'
+\newcommand{\ART}[1]{#1}         % include for 'report' or 'article'
+\newcommand{\SHT}[1]{}           % include for 'sheets'
+\newcommand{\BMR}[1]{}           % include for 'sheets'
+% The next commands are used to make chapters, sections, etc.
+% They can must/may be redefined .
+\newcommand{\HTX}[1]{\mbox{}\\\\\\{\bf\large #1 \mbox{}}}
+\newcommand{\HTXa}[1]{\mbox{}\\\\\\{\bf\large #1 \mbox{}}}
+\newcommand{\HTXaa}[1]{\mbox{}\\\\\\{\bf\large #1 \mbox{}}}
+\newcommand{\HTXb}[1]{\mbox{}\\\\\\{\bf\large #1 \mbox{}}}
+\newcommand{\HTXbb}[1]{\mbox{}\\\\\\{\bf\large #1 \mbox{}}}
+\newcommand{\HTXc}[1]{\mbox{}\\\\\\{\bf\large #1 \mbox{}}}
+\newcommand{\HTXcc}[1]{\mbox{}\\\\\\{\bf\large #1 \mbox{}}}
+\newcommand{\HTXd}[1]{\mbox{}\\\\\\{\bf\large #1 \mbox{}}}
+\newcommand{\HTXdd}[1]{\mbox{}\\\\\\{\bf\large #1 \mbox{}}}
+\newcommand{\HTXe}[1]{\mbox{}\\\\\\{\bf\large #1 \mbox{}}}
+\newcommand{\HTXf}[1]{\mbox{}\\\\\\{\bf\large #1 \mbox{}}}
+\newcommand{\HTXo}[1]{\mbox{}\\\\\\{\bf\large #1 \mbox{}}}
+\newcommand{\HBX}[1]{~\\[-2\baselineskip]}
+\newcommand{\HBx}[1]{~\\[-2\baselineskip]}
+\newcommand{\HBXo}[1]{~\\[-2\baselineskip]}
+\newcommand{\HBXX}[1]{~\\[-2\baselineskip]}
+\newcommand{\VRG}[1]{{\large\bf Q} \SB #1\mbox{}\\}
+\newcommand{\ANT}[1]{{\large\bf A}\mbox{}\\#1\mbox{}\\}
+\newcommand{\ANTT}[1]{{\large\bf A}\mbox{}\\#1\mbox{}\\}
+\newcommand{\UTW}[1]{{\large\bf U}\mbox{}\\#1\mbox{}\\}
+\newcommand{\CNT}[1]{#1}
+\newcommand{\OPG}[1]{[#1]\mbox{}\\}
+\newcommand{\SHTTIT}[2]{}
+\newcommand{\REPTIT}[1]{}
+%**********************************************************************
