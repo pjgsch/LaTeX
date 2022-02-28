@@ -1,0 +1,166 @@
+%======================================================================
+%\usepackage[noxcolor]{beamerarticle}
+\usepackage{verbatim}
+%\usepackage{boxedminipage}
+\usepackage{exscale,alltt}
+\usepackage{epic,eepic,epsf,epsfig,psfrag}
+\usepackage[english]{babel}
+\usepackage{rotating}
+%\usepackage{times}
+%\usepackage{mathptmx}
+%\usepackage{amsmath}
+%%\usepackage{vmargin}
+%\usepackage{a4wide}
+\usepackage{\MYTEXDIR/texmac0}
+\usepackage{\MYTEXDIR/texfig}
+\usepackage{\MYTEXDIR/texext}
+
+%======================================================================
+
+\setbeamertemplate{navigation symbols}{}
+\usetheme{Boadilla}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{euler}
+
+%======================================================================
+
+%\usepackage[usenames,dvips]{color}
+%\usepackage[usenames,dvips,monochrome]{color}
+%\usepackage[colorlinks=true,dvips,breaklinks=true,urlcolor=blue]{hyperref}
+%\usepackage{latexsym}
+
+%======================================================================
+
+\renewcommand{\REP}[1]{}\renewcommand{\SHT}[1]{#1}
+\renewcommand{\ART}[1]{}\renewcommand{\BMR}[1]{#1}
+\renewcommand{\TXT}[1]{}
+%\renewcommand{\FRM}{\TXT}
+\renewcommand{\HBX}[1]{\frametitle{#1}\mbox{}\vspace*{-\baselineskip}}
+\renewcommand{\HBXX}[1]{{\Large{\color{blue}#1}}\mbox{}\vspace*{-\baselineskip}}
+\newcommand{\BTX}[1]{#1}
+
+%======================================================================
+%\usepackage{ifthen}
+%\usepackage{lipsum}
+%\usepackage{comment}
+
+%\newenvironment{talk}{\begin{frame}}{\end{frame}}
+%\newif\ifshow 
+%\ifshow
+%\newenvironment{talk}{}{}
+%\else
+%\excludecomment{talk}
+%\fi
+
+%\newcommand{\showtodos}{show them}  % comment this line if you don't 
+%                                    % want to see todo environment
+%\newenvironment{talk}
+%         {%
+%            \ifthenelse{\isundefined{\showtodos}}%
+%                    {\expandafter\comment}%
+%                    {}%
+%                    }%
+%         {%
+%            \ifthenelse{\isundefined{\showtodos}}%
+%                    {\expandafter\endcomment}%
+%                    {}%
+%          }
+
+%\newenvironment{talk}
+%{
+%\ifthenelse{\isundefined{\showtodos}}
+%{}
+%{
+%%Do what you want here
+%}
+%}
+%{\endcomment}      
+
+%\newsavebox{\trashcan}
+%\newenvironment{talk}{\begin{lrbox}{\trashcan}}%
+%{\end{lrbox}}
+
+%\usepackage{environ}
+%\NewEnviron{talk}{
+%  \ifshow
+%    \textbf{Content of myenv: \BODY}
+%  \fi}
+
+%======================================================================
+
+\setlength{\PSA}{0.75\PSAO}
+\setlength{\PSB}{0.75\PSBO}
+\setlength{\PSC}{0.75\PSCO}
+
+%======================================================================
+
+\usepackage{hyperref}
+
+%======================================================================
+% We can put 4 sheets on one A4 with pgfpages.
+% When we want to print to a file, this is the way to do it.
+% For real printing (on a printer) this is not needed.
+% Printing 4 sheets on one A4 is done with acroread.
+% For printing of the sheets we redefine (skip) \pause
+
+%\usepackage{pgfpages}
+%\usepackage{pgf}
+%\pgfpagesuselayout{4 on 1 with notes}[a4paper,border shrink=5mm]
+%\pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=8mm]
+
+%======================================================================
+
+\renewcommand{\HTX}[1]{%
+\frametitle{\color{red}#1}\mbox{}\vspace*{-\baselineskip}
+%{\color{red}\sf\Large #1 \mbox{}\\}\mbox{}%
+}
+\renewcommand{\HTXa}[1]{%
+\frametitle{\color{red}#1}\mbox{}\vspace*{-\baselineskip}
+%{\color{red}\sf\Large #1 \mbox{}\\}\mbox{}%
+}
+\renewcommand{\HTXaa}[1]{%
+\frametitle{\color{red}#1}\mbox{}\vspace*{-\baselineskip}
+%{\color{red}\sf\Large #1 \mbox{}\\}\mbox{}%
+}
+\renewcommand{\HTXb}[1]{%
+\frametitle{\color{red}#1}\mbox{}\vspace*{-\baselineskip}
+%{\color{red}\sf\Large #1 \mbox{}\\}\mbox{}%
+}
+\renewcommand{\HTXbb}[1]{%
+\frametitle{\color{red}#1}\mbox{}\vspace*{-\baselineskip}
+%{\color{red}\sf\Large #1 \mbox{}\\}\mbox{}%
+}
+\renewcommand{\HTXc}[1]{%
+\frametitle{\color{red}#1}\mbox{}\vspace*{-\baselineskip}
+%{\color{red}\sf\Large #1 \mbox{}\\}\mbox{}%
+}
+\renewcommand{\HTXcc}[1]{%
+\frametitle{\color{red}#1}\mbox{}\vspace*{-\baselineskip}
+%{\color{red}\sf\Large #1 \mbox{}\\}\mbox{}%
+}
+\renewcommand{\HTXd}[1]{%
+\frametitle{\color{red}#1}\mbox{}\vspace*{-\baselineskip}
+%{\color{red}\sf\Large #1 \mbox{}\\}\mbox{}%
+}
+\renewcommand{\HTXdd}[1]{%
+\frametitle{\color{red}#1}\mbox{}\vspace*{-\baselineskip}
+%{\color{red}\sf\Large #1 \mbox{}\\}\mbox{}%
+}
+\renewcommand{\HTXe}[1]{%
+\frametitle{\color{red}#1}\mbox{}\vspace*{-\baselineskip}
+%{\color{red}\sf\Large #1 \mbox{}\\}\mbox{}%
+}
+\renewcommand{\HTXf}[1]{%
+\frametitle{\color{red}#1}\mbox{}\vspace*{-\baselineskip}
+%{\color{red}\sf\Large #1 \mbox{}\\}\mbox{}%
+}
+\renewcommand{\HTXo}[1]{%
+\frametitle{\color{red}#1}\mbox{}\vspace*{-\baselineskip}
+%{\color{red}\sf\Large #1 \mbox{}\\}\mbox{}%
+}
+\renewcommand{\HBXo}[1]{%
+\frametitle{\color{red}#1}\mbox{}\vspace*{-\baselineskip}
+%{\color{red}\sf\Large #1 \mbox{}\\}\mbox{}%
+}
+
+%======================================================================

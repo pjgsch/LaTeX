@@ -1,0 +1,155 @@
+%======================================================================
+% \usepackage{beamerarticle}
+ \usepackage{verbatim}
+% \usepackage{boxedminipage}
+ \usepackage{exscale,alltt}
+ \usepackage{epic,eepic,epsf,epsfig,psfrag}
+ \usepackage[english]{babel}
+ \usepackage{rotating}
+% \usepackage{times}
+% \usepackage{mathptmx}
+% \usepackage{amsmath}
+%% \usepackage{vmargin}
+ \usepackage{longtable}
+ \usepackage{amssymb}
+ \usepackage{a4wide}
+ \usepackage{\MYTEXDIR/texmac0}
+ \usepackage{\MYTEXDIR/texfig}
+ \usepackage{\MYTEXDIR/texext}
+
+%======================================================================
+
+\renewenvironment{frame}[1][\unskip]%
+{}
+%{\mbox{}\\[-\baselineskip]\begin{boxedminipage}[t]{\textwidth}\mbox{}}
+%{\vspace{-\baselineskip}\par\noindent\rule{\textwidth}{0.1mm}\vspace{-\baselineskip}}
+%{\mbox{}\\[-\baselineskip]\end{boxedminipage}\mbox{}}
+{}
+\newcommand{\frametitle}[1]
+{}%
+%\renewcommand{\frametitle}[1]{\hspace*{-0.05\textwidth}\rule{1\textwidth}{0.1mm}}%
+%\usepackage[usenames,dvips,monochrome]{color}
+
+%======================================================================
+
+\usepackage[usenames,dvips]{color}
+%\usepackage[usenames,dvips,monochrome]{color}
+%\usepackage[colorlinks=true,dvips,breaklinks=true,urlcolor=blue]{hyperref}
+%\usepackage{latexsym}
+
+%======================================================================
+
+\renewcommand{\REP}[1]{#1}\renewcommand{\SHT}[1]{}
+\renewcommand{\ART}[1]{#1}\renewcommand{\BMR}[1]{}
+\renewcommand{\TXT}[1]{~\\[0\baselineskip] #1\mbox{}}
+\renewcommand{\FRM}{\TXT}
+%\renewcommand{\HBX}[1]{\frametitle{#1}}
+\renewcommand{\HBX}[1]{\mbox{}\vspace*{-\baselineskip}}
+%\renewcommand{\HBXX}[1]{\mbox{}\vspace*{-\baselineskip}}
+%\newcommand{\BTX}[1]{#1}
+
+%======================================================================
+
+\renewcommand{\FIT}[1]{%
+\stepcounter{fignum}%
+\nopagebreak\vspace*{-\baselineskip}\nopagebreak%
+\begin{center}%
+Fig. \arabic{section}.\arabic{fignum} : {\em #1}%
+\end{center}%
+\nopagebreak\vspace*{0.5\baselineskip}\nopagebreak%
+}
+
+%======================================================================
+
+\setlength{\PSA}{\PSAO}
+\setlength{\PSB}{\PSBO}
+\setlength{\PSC}{\PSCO}
+
+%======================================================================
+
+\usepackage{hyperref}
+
+%======================================================================
+\REP{
+\newcommand{\chapter}{\section}
+
+\renewcommand{\HTX}[1]{%
+%\newpage
+%\vspace*{-\baselineskip}\mbox{}%
+\section{#1}%
+\vspace*{-2\baselineskip}\mbox{}%
+}
+\renewcommand{\HTXa}[1]{%
+%\newpage
+%\vspace*{-\baselineskip}\mbox{}%
+\section{#1}%
+\vspace*{-2\baselineskip}\mbox{}%
+}
+\renewcommand{\HTXaa}[1]{%
+%\newpage
+\vspace*{-\baselineskip}\mbox{}%
+\section*{#1}%
+\vspace*{-2\baselineskip}\mbox{}%
+}
+\renewcommand{\HTXb}[1]{%
+\vspace*{-\baselineskip}\mbox{}%
+\subsection{#1}%
+\vspace*{-2\baselineskip}\mbox{}%
+}
+\renewcommand{\HTXbb}[1]{%
+\vspace*{-\baselineskip}\mbox{}%
+\subsection*{#1}%
+\vspace*{-2\baselineskip}\mbox{}%
+}
+\renewcommand{\HTXc}[1]{%
+\vspace*{-\baselineskip}\mbox{}%
+\subsubsection{#1}%
+\vspace*{-2\baselineskip}\mbox{}%
+}
+\renewcommand{\HTXcc}[1]{%
+\vspace*{-\baselineskip}\mbox{}%
+\subsubsection*{#1}%
+\vspace*{-2\baselineskip}\mbox{}%
+}
+\renewcommand{\HTXd}[1]{%
+\vspace*{-\baselineskip}\mbox{}%
+\subsubsection*{#1}%
+\vspace*{-2\baselineskip}\mbox{}%
+}
+\renewcommand{\HTXdd}[1]{%
+\vspace*{-\baselineskip}\mbox{}%
+\subsubsection*{#1}%
+\vspace*{-2\baselineskip}\mbox{}%
+}
+\renewcommand{\HTXe}[1]{%
+%\vspace*{-\baselineskip}\mbox{}%
+{\mbox{}\em #1}%
+%\vspace*{-2\baselineskip}\mbox{}%
+}
+\renewcommand{\HTXf}[1]{%
+%\vspace*{-2\baselineskip}\mbox{}%
+{\mbox{}\bf #1}%
+%\vspace*{-2\baselineskip}\mbox{}%
+}
+\renewcommand{\HTXo}[1]{\vspace*{-2\baselineskip}\mbox{}}
+\renewcommand{\HBXo}[1]{\vspace*{-2\baselineskip}\mbox{}}
+
+\newcommand{\HTXN}[1]{%
+%\newpage
+%\vspace*{-\baselineskip}\mbox{}%
+\section*{#1}%
+\vspace*{-2\baselineskip}\mbox{}%
+}
+
+}
+
+%======================================================================
+
+\newcommand{\pause}{}
+\pagenumbering{arabic} 
+\pagestyle{empty}
+%\pagestyle{myheadings} 
+%\setcounter{page}{0}
+\setlength{\parindent}{0em}
+
+%======================================================================
