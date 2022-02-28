@@ -1,0 +1,75 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \input{texbas.inp}
+%========================================
+% \documentclass[11pt,a4paper]{book}  %,fleqn
+% \usepackage{\MYTEXDIR/texbks}                   
+% \documentclass[11pt,a4paper]{article}   % ,fleqn
+% \usepackage{\MYTEXDIR/texart}                    
+ \documentclass[10pt,xcolor=svgnames,t]{beamer}
+ \usepackage{\MYTEXDIR/texbmr}
+% \documentclass[a4paper,12pt]{letter}
+%========================================
+% \usepackage[english]{babel}
+% \usepackage[dutch]{babel}
+% \usepackage{a4wide}
+% \usepackage{longtable}
+% \usepackage{epic,eepic}
+% \usepackage{epsf,epsfig,psfrag}
+% \usepackage{exscale}
+% \usepackage{amssymb}
+% \usepackage{euler}
+% \usepackage{pstricks,rotating}                  
+% \usepackage{alltt}
+% \usepackage{verbatim}
+% \usepackage[usenames]{color}
+% \usepackage{listings,comment}
+% \excludecomment{listing}
+%%%% to include pdf-files: execute pdflatex <texfile>
+% \usepackage{hyperref}
+% \hypersetup{ bookmarks = false
+%            ,pdftitle = {educational stuff}
+%            ,pdfborderstyle = {/S/U/W 1} % {/S/U} % 
+%            ,pdfborder = 0 0 0 
+%            ,colorlinks = true
+%            ,linkbordercolor = red
+%            ,linkcolor = blue
+%            ,citecolor = blue
+%            ,urlcolor = blue
+%            ,linktoc = page
+% }
+% \usepackage{pdfpages}
+%========================================
+ \begin{document}
+%========================================
+% No figures
+% \renewcommand{\FIG}[3]%
+%  {\begin{center}\fbox{\bf\color{red}EEPIC FIGURE}\end{center}}
+% \renewcommand{\FIGS}[3]
+%  {\fbox{\bf\color{red}EEPIC FIGURE}}
+% \renewcommand{\includegraphics}[2][]{EPS FIGURE}
+%========================================
+ \setlength{\parindent}{0em}
+ \pagenumbering{arabic} 
+% \pagenumbering{Roman}
+ \pagestyle{empty}
+% \pagestyle{myheadings}
+% \setcounter{page}{0}
+% \setcounter{fignum}{0}
+%========================================
+
+ \input{tex.txi}
+% \verbatiminput{tex.txi}
+
+% Possible templates:
+%  tpltxiini.txi
+%  tplart.txi
+%  tplbmr.txi
+%  tplbmr+ind.txi
+%  tplbrief.txi
+%  tplletter.txi
+%  tplnote.txi
+%  tplfig.txi
+
+%========================================
+ \end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

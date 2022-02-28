@@ -1,0 +1,54 @@
+%**********************************************************************
+\setlength{\parindent}{0em}
+%======================================================================
+\newpage
+\vspace*{4.5cm}
+\thispagestyle{empty}
+\addtocounter{page}{-1}
+
+\hspace*{4.5cm}
+\begin{minipage}{0.5\textwidth}
+
+{\begin{center}\LARGE\bf 
+TITLE
+\end{center}}
+
+%\vspace*{1cm}
+
+{\begin{center} \large\sf 
+Subtitle
+\end{center}}
+
+%\vspace*{1cm}
+{\begin{center} Name \end{center}}
+
+\end{minipage}
+
+\vspace*{4cm}
+
+Eindhoven University of Technology \\
+Department of Mechanical Engineering\\
+Materials Technology\\
+\today
+
+\thispagestyle{empty}
+
+\mbox{} \newpage \mbox{} \thispagestyle{empty}
+%======================================================================
+\pagenumbering{Roman} \pagestyle{myheadings} \setcounter{page}{0}
+\newpage
+\tableofcontents
+\newpage
+\thispagestyle{empty}
+\pagenumbering{arabic} \pagestyle{myheadings} \setcounter{page}{0}
+%======================================================================
+\section{Introduction}
+
+This is the introduction.
+
+\subsection{First subsection}
+
+This is the first subsection.
+
+%======================================================================
+%**********************************************************************

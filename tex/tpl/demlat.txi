@@ -1,0 +1,634 @@
+%**********************************************************************
+% Plain LaTeX features
+%**********************************************************************
+\newpage
+\section{Plain \LaTeX\ features}
+
+In the following paragraphs some simple \LaTeX\ commands are demonstrated.
+See the \LaTeX\ books for more information.
+The \LaTeX\ input is typed between 
+\verb.------. lines in typewriter font.
+
+%======================================================================
+\subsection{Starting \LaTeX}
+
+On most Unix/Linux computers \TeX\ version 3.14159 (C version 6.1) 
+is available (\LaTeX2e).
+The executables for \LaTeX and associated programs must be in your
+search path.
+To start \LaTeX\ just type ''latex'' followed by the \LaTeX\ file name.
+This file must have the extension {\bf .tex}.
+\\
+
+tip : 
+\hfill
+\begin{minipage}[t]{0.9\textwidth}
+{\sf
+Use in one directory just one {\bf .tex} file eg.\ {\bf tex.tex} in which 
+you include your \LaTeX\ source files.
+In this way you will not end up with a huge amount of files, which could easily
+happen as \LaTeX\ generates a number of output file {\bf tex.xxx} with various
+extensions.
+}\\
+\end{minipage}
+
+The {\bf tex} file must always start with some commands which tell \LaTeX\
+which {\em packages} will be used.
+An example of a {\bf tex.tex} file which would produce the first chapter 
+of this text is~:
+
+\begin{verbatim}
+----------------------------------------------------------------------
+\documentclass[11pt]{article}
+\usepackage{a4wide}
+\usepackage{verbatim}
+
+\setlength{\parindent}{0em}
+
+\begin{document}
+
+\tableofcontents
+
+\section{Plain \LaTeX\ features}
+\input demtex.txi 
+
+\end{document}
+----------------------------------------------------------------------
+\end{verbatim}
+
+The text with the \LaTeX\ commands is in the file {\em demtex.txi} 
+(The extension .txi is arbitrary).
+If you use selfmade style files you must place them in a directory
+where \LaTeX\ can find them.
+\\
+
+Headings are  made with \verb.sectioning. commands like
+\verb.\part{ }.,
+\verb.\chapter{ }.,
+\verb.\section{ }.,
+\verb.\subsection{ }.,
+\verb.\subsubsection{ }.,
+\verb.\paragraph{ }. and
+\verb.\subparagraph{ }..
+
+\LaTeX\ automatically generates the section number.
+Blank lines before or after a sectioning command have no effect.
+Numbering can be suppressed with eg.\ \verb.\chapter*{ }.
+\\
+
+As can be seen we have used the command \verb.\tableofcontents..
+This results in the {\bf Contents} which contains the titles of (sub..)sections
+with their numbers and starting pagenumbers.
+You can use \verb.\section[contentstitle]{sectiontitle}.
+to place an alternative for the section title in the contents.
+
+%======================================================================
+%\newpage
+\subsection{Paragraphs and line-skips}
+
+%\begin{verbatim}
+%----------------------------------------------------------------------
+%In this section we show what to do if you want to start a new paragraph
+%or a new line.
+%Also skipping one or more lines is demonstrated.
+%A \verb.blankline. or \verb.\par. starts a new paragraph except 
+%before/after sectioning, 
+%after \verb.\begin. and 
+%before \verb.\end..
+%A new line is started with \verb.\\. or \verb.\newline..
+%Using \verb.\\[space]. adds vertical space.
+%----------------------------------------------------------------------
+%\end{verbatim}
+
+In this section we show what to do if you want to start a new paragraph
+or a new line.
+Also skipping one or more lines is demonstrated.
+A \verb.blankline. or \verb.\par. starts a new paragraph except before/after 
+sectioning, after \verb.\begin. and before \verb.\end..
+A new line is started with \verb.\\. or \verb.\newline..
+Using \verb.\\[space]. adds vertical space.
+
+%\begin{verbatim}
+%----------------------------------------------------------------------
+%Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+%bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+%
+%Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+%\\
+%
+%Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+%bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+%\par
+%Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+%\setlength{\parindent}{10em}
+%bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+%
+%Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+%bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+%\setlength{\parindent}{0em}
+%\par
+%Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+%----------------------------------------------------------------------
+%\end{verbatim}
+
+Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+
+Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+\\
+
+Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+\par
+Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+\setlength{\parindent}{10em}
+bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+
+Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+\setlength{\parindent}{0em}
+\par
+Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+\\
+
+%======================================================================
+%\newpage
+\subsection{''Elastic'' spacing}
+
+%\begin{verbatim}
+%----------------------------------------------------------------------
+%Spaces may be stretched with commands shown in the next \LaTeX\ code~:
+%
+%Here is a \hfill      stretched space.\\
+%Here are  \hfill      two \hfill equal ones.\\
+%Here is a \dotfill\   dotfilled space.\\
+%Here is a \hrulefill\ rulefilled space.\\
+%Here are  \hrulefill\ two \hrulefill rulefilled spaces.
+%----------------------------------------------------------------------
+%\end{verbatim}
+
+Spaces may be stretched with commands shown in the next \LaTeX\ code~:
+
+Here is a \hfill      stretched space.\\
+Here are  \hfill      two \hfill equal ones.\\
+Here is a \dotfill\   dotfilled space.\\
+Here is a \hrulefill\ rulefilled space.\\
+Here are  \hrulefill\ two \hrulefill rulefilled spaces.
+\\
+
+
+%\begin{verbatim}
+%----------------------------------------------------------------------
+%Special features are~:
+%
+%Dashes : X-ray, 1--2, dash---like.\\
+%Space after a period : Romans et al.\ wrote I + I = II\@. Really!\\
+%If printed \ldots, it is \today. \\
+%Special characters are typed with \verb.\. \ \ :
+%\# \$ \% \& \_ \{ \}  \\
+%We can prevent the break of the word \mbox{\em doneverbreak}.\\
+%We can indicate possibel break-points as do\-pos\-sible\-break\-here.\\
+%We can make footnotes \footnote{A footnote in \LaTeX\.}.\\
+%----------------------------------------------------------------------
+%\end{verbatim}
+
+Special features are~:
+
+Dashes : X-ray, 1--2, dash---like.\\
+Space after a period : Romans et al.\ wrote I + I = II\@. Really!\\
+If printed \ldots, it is \today. \\
+Special characters are typed with \verb.\. \ \ :
+\# \$ \% \& \_ \{ \}  \\
+We can prevent the break of the word \mbox{\em doneverbreak}.\\
+We can indicate possible break-points as do\-pos\-sible\-break\-here.\\
+We can make footnotes \footnote{A footnote in \LaTeX }.
+\\
+
+%======================================================================
+%\newpage
+\subsection{Centering and flushing}
+
+\LaTeX\ has a few environments to make the text appear 
+\verb.centered., \verb.flushleft. and \verb.flushright.
+
+Some examples.
+
+%\begin{verbatim}
+%----------------------------------------------------------------------
+%bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+%\begin{center}
+%BCE BCE BCE BCE BCE BCE BCE BCE 
+%\end{center}
+%bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+%----------------------------------------------------------------------
+%\end{verbatim}
+
+bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+\begin{center}
+BCE BCE BCE BCE BCE BCE BCE BCE 
+\end{center}
+bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+
+%\begin{verbatim}
+%----------------------------------------------------------------------
+%bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+%\begin{flushleft}
+%BFL BFL BFL BFL BFL BFL BFL BFL BFL BFL  
+%\end{flushleft}
+%bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+%----------------------------------------------------------------------
+%\end{verbatim}
+
+bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+\begin{flushleft}
+BFL BFL BFL BFL BFL BFL BFL BFL BFL BFL 
+\end{flushleft}
+bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+
+%\begin{verbatim}
+%----------------------------------------------------------------------
+%bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+%\begin{flushright}
+%BFR BFR BFR BFR BFR BFR BFR BFR BFR BFR BFR BFR BFR BFR BFR BFR BFR BFR 
+%BFR BFR BFR BFR BFR BFR BFR BFR BFR 
+%\end{flushright}
+%bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+%----------------------------------------------------------------------
+%\end{verbatim}
+
+bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+\begin{flushright}
+BFR BFR BFR BFR BFR BFR BFR BFR BFR BFR BFR BFR BFR BFR BFR BFR BFR BFR 
+BFR BFR BFR BFR BFR BFR BFR BFR BFR 
+\end{flushright}
+bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+
+%======================================================================
+%\newpage
+\subsection{Itemizing}
+
+Some commands for ''itemizing'' are available and shown below.
+
+%\begin{verbatim}
+%----------------------------------------------------------------------
+%bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+%\begin{itemize}
+%\item BIT BIT BIT BIT BIT BIT BIT BIT BIT BIT BIT BIT BIT BIT BIT BIT
+%\item BIT BIT BIT BIT BIT BIT BIT BIT BIT BIT BIT BIT BIT BIT BIT BIT
+%\end{itemize}
+%bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+%----------------------------------------------------------------------
+%\end{verbatim}
+
+bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+\begin{itemize}
+\item BIT BIT BIT BIT BIT BIT BIT BIT BIT BIT BIT BIT BIT BIT BIT BIT
+\item BIT BIT BIT BIT BIT BIT BIT BIT BIT BIT BIT BIT BIT BIT BIT BIT
+\end{itemize}
+bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+
+%\begin{verbatim}
+%----------------------------------------------------------------------
+%bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+%\begin{enumerate}
+%\item BEN BEN BEN BEN BEN BEN BEN BEN BEN 
+%\item BEN BEN BEN BEN BEN BEN BEN BEN BEN 
+%\end{enumerate}
+%bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+%----------------------------------------------------------------------
+%\end{verbatim}
+
+bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+\begin{enumerate}
+\item BEN BEN BEN BEN BEN BEN BEN BEN BEN 
+\item BEN BEN BEN BEN BEN BEN BEN BEN BEN 
+\end{enumerate}
+bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+
+%\begin{verbatim}
+%----------------------------------------------------------------------
+%bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+%\begin{description}
+%\item[label1]
+%BDE BDE BDE BDE BDE BDE BDE BDE BDE BDE
+%\item[this is label2]
+%BDE BDE BDE BDE BDE BDE BDE BDE BDE BDE
+%\end{description}
+%bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+%----------------------------------------------------------------------
+%\end{verbatim}
+
+bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+\begin{description}
+\item[label1]
+BDE BDE BDE BDE BDE BDE BDE BDE BDE BDE
+\item[this is label2]
+BDE BDE BDE BDE BDE BDE BDE BDE BDE BDE
+\end{description}
+bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+
+
+%======================================================================
+%\newpage
+\subsection{Font styles and sizes}
+
+%\begin{verbatim}
+%----------------------------------------------------------------------
+%The following styles are available~:\\
+%
+%\verb.\rm. \rm  roman, 
+%\verb.\sf. \sf  sans serif,
+%\verb.\sl. \sl  slanted,
+%\verb.\it. \it  italic,
+%\verb.\tt. \tt  typewriter,
+%\verb.\bf. \bf  bold face,
+%\verb.\sc. \sc  small caps,
+%\verb.\em. \em  emphatic 
+%\verb.\rm. \rm  and roman again.
+%----------------------------------------------------------------------
+%\end{verbatim}
+
+The following styles are available~:\\
+
+\verb.\rm. \rm  roman, 
+\verb.\sf. \sf  sans serif,
+\verb.\sl. \sl  slanted,
+\verb.\it. \it  italic,
+\verb.\tt. \tt  typewriter,
+\verb.\bf. \bf  bold face,
+\verb.\sc. \sc  small caps,
+\verb.\em. \em  emphatic 
+\verb.\rm. \rm  and roman again.
+
+%\begin{verbatim}
+%----------------------------------------------------------------------
+%Compare closely {\sl slanted\/} and {\it slanted}.\\
+%The \verb+\/+ command is used to keep any leaning character from
+%bumping against one that doesn't lean.
+%----------------------------------------------------------------------
+%\end{verbatim}
+
+Compare closely {\sl slanted\/} and {\it slanted}.\\
+The \verb+\/+ command is used to keep any leaning character from
+bumping against one that doesn't lean.
+\\
+
+Every style can be used in different sizes.
+The size must be changed {\bf before} the type.\\
+
+\begin{tabular}{@{}lll}
+Use \verb+\tiny+         &  to write & {\tiny abcdefghijABCDEFGHIJ123} \\
+Use \verb+\scriptsize+   &  to write & {\scriptsize abcdefghijABCDEFGHIJ123} \\
+Use \verb+\footnotesize+ &  to write & {\footnotesize abcdefghijABCDEFGHIJ123} \\ 
+Use \verb+\small+        &  to write & {\small abcdefghijABCDEFGHIJ123} \\ 
+Use \verb+\normalsize+   &  to write & {\normalsize abcdefghijABCDEFGHIJ123} \\
+Use \verb+\large+        &  to write & {\large abcdefghijABCDEFGHIJ123} \\
+Use \verb+\Large+        &  to write & {\Large abcdefghijABCDEFGHIJ123} \\ 
+Use \verb+\LARGE+        &  to write & {\LARGE abcdefghijABCDEFGHIJ123} \\ 
+Use \verb+\huge+         &  to write & {\huge abcdefghijABCDEFGHIJ123} \\ 
+Use \verb+\Huge+         &  to write & {\Huge abcdefghijABCDEFGHIJ123} \\ 
+\end{tabular}
+
+%======================================================================
+%\newpage
+\subsection{Accents and symbols}
+
+%\begin{verbatim}
+%----------------------------------------------------------------------
+%In the next table some much used symbols and accents are shown, 
+%which can be used in \verb.text. mode.
+%The brackets are not always necessary.
+%The use of \verb.\tabular. will be explained later.
+%\\
+%
+%\begin{tabular}{||*{8}{l|l||}}
+%\hline
+%\dag        & \verb.\dag.        &  
+%\ddag       & \verb.\ddag.       &  
+%\S          & \verb.\S.          &  
+%\copyright  & \verb.\copyright.  \\ 
+%\pounds     & \verb.\pounds.     & 
+%\aa         & \verb.\aa.         & 
+%\AA         & \verb.\AA.         & 
+%\`{o}       & \verb.\`{o}.       \\ 
+%\'{e}       & \verb.\'{e}.       & 
+%\^{u}       & \verb.\^{u}.       & 
+%\"{\i}      & \verb.\"{\i}.      & 
+%\~{n}       & \verb.\~{n}.       \\
+%\={o}       & \verb.\={o}.       & 
+%\.{e}       & \verb.\.{e}.       & 
+%\u{o}       & \verb.\u{o}.       & 
+%\v{e}       & \verb.\v{e}.       \\
+%\hline   
+%\end{tabular}\\
+%----------------------------------------------------------------------
+%\end{verbatim}
+
+
+In the next table some much used symbols and accents are shown, 
+which can be used in \verb.text. mode.
+The brackets are not always necessary.
+The use of \verb.\tabular. will be explained later.
+\\
+
+\begin{tabular}{||*{8}{l|l||}}
+\hline
+\dag        & \verb.\dag.        &  
+\ddag       & \verb.\ddag.       &  
+\S          & \verb.\S.          &  
+\copyright  & \verb.\copyright.  \\ 
+\pounds     & \verb.\pounds.     & 
+\aa         & \verb.\aa.         & 
+\AA         & \verb.\AA.         & 
+\`{o}       & \verb.\`{o}.       \\ 
+\'{e}       & \verb.\'{e}.       & 
+\^{u}       & \verb.\^{u}.       & 
+\"{\i}      & \verb.\"{\i}.      & 
+\~{n}       & \verb.\~{n}.       \\
+\={o}       & \verb.\={o}.       & 
+\.{e}       & \verb.\.{e}.       & 
+\u{o}       & \verb.\u{o}.       & 
+\v{e}       & \verb.\v{e}.       \\
+\hline   
+\end{tabular}\\
+
+%======================================================================
+%\newpage
+\subsection{Boxes}
+
+The next \LaTeX\ box-commands are demonstrated in this section.
+
+\begin{verbatim}
+% \framebox[width][hor-pos=lcr]{text}
+% \makebox[width][hor-pos=lcr]{text}
+% \fbox{text}
+% \mbox{text}
+% \parbox[ver-pos=bct]{width}{text}
+% \begin{minipage}[ver-pos=bct]{width}  text   \end{minipage}
+% \raisebox{len-above-base}[heigth][dept]{text}
+% \rule{len-above-base}{x-length}{y-length}
+\end{verbatim}
+
+%\begin{verbatim}
+%----------------------------------------------------------------------
+%Good \makebox[1in]    {\em gnus} are here.
+%Good \makebox[2cm][l] {\em gnus} are here.\\
+%Good \framebox[1in]   {\em gnus} are here.
+%Good \fbox            {\em gnus} are here.\\
+%Good \raisebox{.6ex}  {\em gnus} are here.
+%Good \raisebox{-.6ex} {\em gnus} are here.
+%----------------------------------------------------------------------
+%\end{verbatim}
+
+Good \makebox[1in]    {\em gnus} are here.
+Good \makebox[2cm][l] {\em gnus} are here.\\
+Good \framebox[1in]   {\em gnus} are here.
+Good \fbox            {\em gnus} are here.\\
+Good \raisebox{.6ex}  {\em gnus} are here.
+Good \raisebox{-.6ex} {\em gnus} are here.
+\\
+
+%\begin{verbatim}
+%----------------------------------------------------------------------
+%Rule 1 : \rule{1mm}{5mm} ;
+%Rule 2 : \rule{5mm}{0.5mm} ; 
+%Rule 3 : \rule[0.1in]{5mm}{0.5mm}\\
+%Compare \fbox{this box} with \fbox{\rule[-.5cm]{0cm}{1cm} this box}.\\
+%You can \raisebox{.6ex}{\em raise} or \raisebox{-.6ex}{\em lower} text.
+%You can also raise a box : 
+%\raisebox{0.7ex}{\framebox[5ex]{\rule[0ex]{0cm}{0.7ex}}}
+%----------------------------------------------------------------------
+%\end{verbatim}
+
+Rule 1 : \rule{1mm}{5mm} ;
+Rule 2 : \rule{5mm}{0.5mm} ; 
+Rule 3 : \rule[0.1in]{5mm}{0.5mm}\\
+Compare \fbox{this box} with \fbox{\rule[-.5cm]{0cm}{1cm} this box}.\\
+You can \raisebox{.6ex}{\em raise} or \raisebox{-.6ex}{\em lower} text.
+You can also raise a box : 
+\raisebox{0.7ex}{\framebox[5ex]{\rule[0ex]{0cm}{0.7ex}}}
+\\
+
+%======================================================================
+%\newpage
+
+Now we demonstrate the use of \verb.\parbox. and \verb.\minipage.,
+which are essentially the same, except that the \verb.\minipage. is an
+environment.
+\\
+
+%\begin{verbatim}
+%----------------------------------------------------------------------
+%\parbox[t]{1in}
+%{This is a parbox aligned on its top line.}
+%\ and this \ 
+%\parbox[b]{1in}
+%{one is alligned on its bottom line.}\\
+%----------------------------------------------------------------------
+%\end{verbatim}
+
+\parbox[t]{1in}
+{This is a parbox aligned on its top line.}
+\ and this \ 
+\parbox[b]{1in}
+{one is alligned on its bottom line.}\\
+
+%\begin{verbatim}
+%----------------------------------------------------------------------
+%The next parbox
+%\parbox[t]{4cm}{is alligned on its top line again}
+%\ and this \ 
+%\framebox{\parbox[t]{3cm}{is also framed}}
+%\\
+%----------------------------------------------------------------------
+%\end{verbatim}
+
+The next parbox
+\parbox[t]{4cm}{is alligned on its top line again}
+\ and this \ 
+\framebox{\parbox[t]{3cm}{is also framed}}
+\\
+
+%\begin{verbatim}
+%----------------------------------------------------------------------
+%\begin{minipage}[t]{1in}
+%This is a minipage alligned on its top line
+%\end{minipage}
+%\ and \ 
+%\begin{minipage}[t]{1in}
+%This is a minipage with a footnote 
+%\footnote{This is the footnote} which is placed in the minipage.
+%\end{minipage}
+%----------------------------------------------------------------------
+%\end{verbatim}
+
+\begin{minipage}[t]{1in}
+This is a minipage alligned on its top line
+\end{minipage}
+\ and \ 
+\begin{minipage}[t]{1in}
+This is a minipage with a footnote 
+\footnote{This is the footnote} which is placed in the minipage.
+\end{minipage}
+\\
+
+%======================================================================
+%\newpage
+\subsection{Tabular}
+
+The \verb.tabular. environment is used very much. 
+It is explained and demonstrated below.
+
+A 'fixed' column can be made with \verb.@{text}. in the tabular 
+specification.
+Using \verb.@{}. sets the column separation to zero.
+It will often be very convenient to define a column as a \verb.parbox.
+with \verb.p{width}. in the tabular specification.
+
+%\begin{verbatim}
+%----------------------------------------------------------------------
+%bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+%
+%\begin{tabular}{ccllr}
+%first & second & third & fourth & fifth \\
+%column & column & column & column & column \\
+%\end{tabular}
+%
+%bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+%----------------------------------------------------------------------
+%\end{verbatim}
+
+bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+
+\begin{tabular}{ccllr}
+first & second & third & fourth & fifth \\
+column & column & column & column & column \\
+\end{tabular}
+
+bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+
+%\begin{verbatim}
+%----------------------------------------------------------------------
+%bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+%\\
+%
+%\begin{tabular}{@{}p{5cm}@{}p{3cm}@{\hspace{1cm}}p{6cm}}
+%first first & second second second second & third third third third \\
+%first first & second second second second & third third third third \\
+%\end{tabular}
+%
+%bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+%----------------------------------------------------------------------
+%\end{verbatim}
+
+bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+\\
+
+\begin{tabular}{@{}p{5cm}@{}p{3cm}@{\hspace{1cm}}p{6cm}}
+first first & second second second second & third third third third \\
+first first & second second second second & third third third third \\
+\end{tabular}
+
+bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+
+%**********************************************************************

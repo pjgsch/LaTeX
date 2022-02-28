@@ -1,0 +1,86 @@
+%**********************************************************************
+% Bibliography
+%**********************************************************************
+\newpage
+\section{Bibliography}
+
+BibTex is a \TeX\ program which can be used to put references to 
+bibliography in your source text.
+Refering to references is done with the command 
+{\em \verb.\.cite\verb.{.reference-key\verb.}.}, as is demonstrated 
+in the next subsections.
+
+%======================================================================
+\subsection{Bibliography in-line}
+
+In this example we want to demonstrate the use of BibTeX where
+references are included in-line.
+Citation can be done with \verb.\cite..
+Examples : \cite{BAT1962a, BAR1976a}.
+
+To ensure that the references are correct,
+we must run latex two times.
+\\
+
+With the command {\em \verb.\.addcontentsline} 
+the {\bf Reference} is included in the
+table-of-contents.
+
+\addcontentsline{toc}{subsection}{References 1}
+
+\begin{thebibliography}{99}
+
+\bibitem{BAT1962a}
+Barenblatt, G.I.{ \em The mathematical theory of equilibrium cracks in brittle fracture}. Advances in Applied Mechanics, Vol 7, 1962, pp 55-129.
+
+\bibitem{BAR1976a}
+Barsoum, R.S.{ \em On the use of isoparametric Finite Elements in Linear Fracture Mechanics}. Int. J. Numerical Methods in Engineering, Vol 10, 1976.
+
+\bibitem{BRO1986a}
+Broek, D.{ \em Elementary engineering fracture mechanics; 4thed.}. Martinus Nijhoff Publishers, 1986.
+
+\end{thebibliography}
+
+%======================================================================
+\subsection{Bibliography in separate file}
+
+Bibliographic data can also be placed in a separate file, 
+which has the extension {\em .bib}.
+The example is more or less copied from the book of Goossens
+\cite{Goossens:1994}.
+We can cite articles written by a single author 
+\cite{FEL91} %\citep{FEL91} 
+and by multiple authors 
+\cite{MIT90} %\citep{MIT90}.
+\\
+
+Here we use the file {\em bibdem.bib}.
+The structure of such a database file can be found elsewhere. 
+The {\bf Reference} section with the bibliographic data,
+is included with the command {\em \verb.\.bibliography}.
+The layout of this section is defined in a package, with the extension 
+{\em .bbs}.
+This file must be ''loaded'' with the command
+{\em \verb.\.bibliographystyle}, preceeding {\em \verb.\.bibliography}.
+Here we use the plain \LaTeX\ style, which is defined in the package
+{\em plainnat.bbs}.
+\\
+
+To ensure that the references are correct,
+the following sequence of commands must be given:
+\\
+
+\begin{tabular}{llcl}
+{\sf latex}  & tex-file &\hspace{5ex}& loads the desired {\em .bbs} style file \\
+{\sf bibtex} & tex-file &\hspace{5ex}& processes the {\em .bib} file \\
+{\sf latex}  & tex-file &\hspace{5ex}& generates the correct references \\
+\\
+\end{tabular}
+
+\addcontentsline{toc}{subsection}{References 2}
+
+\bibliographystyle{plainnat}
+\bibliography{\DEM/bibdem}
+
+
+%**********************************************************************

@@ -1,0 +1,464 @@
+%**********************************************************************
+% Math in LaTeX
+%**********************************************************************
+\newpage
+\section{Math in \LaTeX}
+
+%======================================================================
+\subsection{General remarks}
+
+\LaTeX\ uses the following four math styles when typesetting formulas :\\
+- \makebox[4cm][l]{{\bf display}style} 
+For normal symbols in a displayed formula.\\
+- \makebox[4cm][l]{{\bf text}style} 
+For normal symbols in an in-text formula.\\
+- \makebox[4cm][l]{{\bf script}style} 
+For subscripts and superscripts.\\
+- \makebox[4cm][l]{{\bf scriptscript}style} 
+For further levels of sub- and superscripting.
+
+They can be defined locally in a math environment.
+\\
+
+In math mode \LaTeX\ ignores spaces.
+There are commands to add the amount of horizontal space.
+These are \verb+\.+ for a thin space, \verb+\:+ for a medium space,
+\verb+\;+ for a thick space and \verb+\!+ for a negative thin space.
+
+Examples :
+
+%\begin{verbatim}
+%----------------------------------------------------------------------
+%\[ \sqrt{2} \, x           \mbox{\ \ instead of\ \ } \sqrt{2}x \]
+%\[ n / \! \log n           \mbox{\ \ instead of\ \ } n/\log n \]
+%\[ \int\!\!\int z\,dx\,dx  \mbox{\ \ instead of\ \ } \int\int z dx dy \]
+%----------------------------------------------------------------------
+%\end{verbatim}
+
+\[ \sqrt{2} \, x           \mbox{\ \ instead of\ \ } \sqrt{2}x \]
+\[ n / \! \log n           \mbox{\ \ instead of\ \ } n/\log n \]
+\[ \int\!\!\int z\,dx\,dx  \mbox{\ \ instead of\ \ } \int\int z dx dy \]
+
+%======================================================================
+%\newpage
+\subsection{symbols and accents}
+
+In the next table some much used \LaTeX\ commands for symbols 
+are shown.
+The commands must be placed in a \verb.math. environment.
+\\
+
+\begin{tabular}{||*{3}{l|l||}}
+\hline
+$\div$        & \verb.\div.      &  
+$\pm$         & \verb.\pm.       &  
+$\ast$        & \verb.\ast.      \\  
+$\star$       & \verb.\star.     &  
+$\leq$        & \verb.\leq.      &  
+$\geq$        & \verb.\geq.      \\ 
+$\equiv$      & \verb.\equiv.    &  
+$\neq$        & \verb.\neq.      &  
+$\ll$         & \verb.\ll.       \\  
+$\gg$         & \verb.\gg.       &  
+$\subset$     & \verb.\subset.   &  
+$\emptyset$   & \verb.\emptyset. \\  
+$\cap$        & \verb.\cap.      &  
+$\cup$        & \verb.\cup.      &  
+$\in$         & \verb.\in.       \\  
+$\imath$      & \verb.\imath.    &  
+$\jmath$      & \verb.\jmath.    &  
+$\forall$     & \verb.\forall.   \\  
+$\infty$      & \verb.\infty.    &  
+$\exists$     & \verb.\exists.   &  
+$\nabla$      & \verb.\nabla.    \\
+\hline  
+\end{tabular}
+~\\\\
+
+There are some variable-sized symbols like~:\\
+
+\begin{tabular}{||*{3}{l|l||}}
+\hline
+$\sum$    & \verb.\sum.    &  
+$\int$    & \verb.\int.    &  
+$\oint$   & \verb.\oint.   \\
+\hline
+\end{tabular}
+\\
+
+~\\
+
+Some Log-like functions are typed in text-fonts in a mathematical
+environment by preceeding their names with \verb.\. 
+(eg.\ \verb.\log.).
+\LaTeX\ defines the following functions~:
+\\
+
+\begin{tabular}{*{8}{l}}
+$\arccos$  & $\cos$    & $\csc$  & $\exp$   &
+$\ker$     & $\limsup$ & $\min$  & $\sinh$  \\
+$\arcsin$  & $\cosh$   & $\deg$  & $\gcd$   &
+$\lg$      & $\ln$     & $\Pr$   & $\sup$   \\
+$\arctan$  & $\cot$    & $\det$  & $\hom$   &
+$\lim$     & $\log$    & $\sec$  & $\tan$   \\
+$\arg$     & $\coth$   & $\dim$  & $\inf$   & 
+$\liminf$  & $\max$    & $\sin$  & $\tanh$
+\end{tabular}
+\\
+
+There are much more features available which can be found in the \LaTeX\
+books.
+
+%======================================================================
+%\newpage
+\subsection{Examples}
+
+%\begin{verbatim}
+%----------------------------------------------------------------------
+%\[
+%   r = r_0 + \alpha ( T - T_0 )
+%\]
+%
+%\[
+%   \frac{1}{\rho} - \frac{1}{r}
+%   = \frac{\omega}{u \sin \theta}
+%\]
+%
+%\[
+%   \alpha
+%   = \frac{\omega_f - \omega_0}{t}
+%\]
+%
+%\[
+%   f_0
+%   = \frac{1}{2 \pi \sqrt{LC} }
+%\]
+%
+%
+%\[
+%   \nu_{rms}
+%   = \sqrt{ \frac{3 k T}{m_0} }
+%\]
+%----------------------------------------------------------------------
+%\end{verbatim}
+
+\[
+   r = r_0 + \alpha ( T - T_0 )
+\]
+
+\[
+   \frac{1}{\rho} - \frac{1}{r}
+   = \frac{\omega}{u \sin \theta}
+\]
+
+\[
+   \alpha
+   = \frac{\omega_f - \omega_0}{t}
+\]
+
+\[
+   f_0
+   = \frac{1}{2 \pi \sqrt{LC} }
+\]
+
+
+\[
+   \nu_{rms}
+   = \sqrt{ \frac{3 k T}{m_0} }
+\]
+
+%======================================================================
+%\newpage
+
+%\begin{verbatim}
+%----------------------------------------------------------------------
+%\[
+%   \frac{3 \sin \phi}{2 + \cos \phi}
+%   =
+%   \phi - {\textstyle \frac{1}{180}} \phi^5 + O(\phi^7)
+%   \hspace{1cm}
+%   (\phi \rightarrow 0)
+%\]
+%
+%\[
+%   \mbox{tg} 15^o = 2 - \sqrt{3}
+%\]
+%
+%\[
+%   e^x
+%   = \lim_{n \rightarrow \infty}
+%     \left( 1 + \frac{x}{n} \right)^n
+%\]
+%
+%\[
+%   C
+%   =
+%   \left[
+%   \begin{array}{ccc}
+%   0  &  \kappa  &  0 \\ 
+%   -\kappa  &  0  & \tau \\
+%   0 & -\tau & 0
+%   \end{array}
+%   \right]
+%\]
+%
+%\[
+%   k_W
+%   = [H^+] \times [OH^-] \approx 10^{-14}
+%   \hspace{1cm}\mbox{of}\hspace{1cm}
+%   k_W
+%   = [\mbox{H}^+] \times [\mbox{OH}^-] \approx 10^{-14}
+%\]
+%----------------------------------------------------------------------
+%\end{verbatim}
+
+
+\[
+   \frac{3 \sin \phi}{2 + \cos \phi}
+   =
+   \phi - {\textstyle \frac{1}{180}} \phi^5 + O(\phi^7)
+   \hspace{1cm}
+   (\phi \rightarrow 0)
+\]
+
+\[
+   \mbox{tg} 15^o = 2 - \sqrt{3}
+\]
+
+\[
+   e^x
+   = \lim_{n \rightarrow \infty}
+     \left( 1 + \frac{x}{n} \right)^n
+\]
+
+\[
+   C
+   =
+   \left[
+   \begin{array}{ccc}
+   0  &  \kappa  &  0 \\ 
+   -\kappa  &  0  & \tau \\
+   0 & -\tau & 0
+   \end{array}
+   \right]
+\]
+
+\[
+   k_W
+   = [H^+] \times [OH^-] \approx 10^{-14}
+   \hspace{1cm}\mbox{of}\hspace{1cm}
+   k_W
+   = [\mbox{H}^+] \times [\mbox{OH}^-] \approx 10^{-14}
+\]
+
+%======================================================================
+%\newpage
+
+%\begin{verbatim}
+%----------------------------------------------------------------------
+%\[
+%   f(x)
+%   =
+%   {\textstyle \frac{1}{2 \pi}}
+%   \int_{-\infty}^{+\infty} e^{-itx} \Phi (t) \,dt
+%\]
+%
+%\[
+%   \sum_{j=0}^{n} 
+%   \left(\!\! \begin{array}{c} n \\ j \end{array} \!\!\right)
+%   \frac{(-1)^j}{m+j} 
+%   =
+%   \frac{1}{m \left(\!\! \begin{array}{c} m+n \\ n \end{array} \!\!\right) }
+%   \hspace{1cm}
+%   (n \geq 0, m\geq 1)
+%\]
+%----------------------------------------------------------------------
+%\end{verbatim}
+
+\[
+   f(x)
+   =
+   {\textstyle \frac{1}{2 \pi}}
+   \int_{-\infty}^{+\infty} e^{-itx} \Phi (t) \,dt
+\]
+
+\[
+   \sum_{j=0}^{n} 
+   \left(\!\! \begin{array}{c} n \\ j \end{array} \!\!\right)
+   \frac{(-1)^j}{m+j} 
+   =
+   \frac{1}{m \left(\!\! \begin{array}{c} m+n \\ n \end{array} \!\!\right) }
+   \hspace{1cm}
+   (n \geq 0, m\geq 1)
+\]
+
+%======================================================================
+%\newpage
+
+%\begin{verbatim}
+%----------------------------------------------------------------------
+%\[
+%   f(x)
+%   =
+%   \left\{
+%   \begin{array}{lll}
+%   0 & \mbox{als} & x \leq 0 \\
+%   \frac{b^n}{\Gamma (p)} x^{p-1} e^{-bx} & \mbox{als} & x > 0
+%   \end{array}
+%   \right.
+%   \hspace{1cm}\mbox{of}\hspace{1cm}
+%   f(x)
+%   =
+%   \left\{
+%   \begin{array}{lll}
+%   0 & \mbox{als} & x \leq 0 \\
+%   {\displaystyle \frac{b^n}{\Gamma (p)} x^{p-1} e^{-bx} }
+%     & \mbox{als} & x > 0
+%   \end{array}
+%   \right.
+%\]
+%
+%\[
+%   A
+%   =
+%   \left[
+%   \begin{array}{cccc}
+%   a_{11} & a_{12} & \cdots & a_{1n} \\
+%   a_{21} & a_{22} & \cdots & a_{2n} \\
+%   \vdots & \vdots & \ddots & \vdots \\
+%   a_{m1} & a_{m2} & \cdots & a_{mn}
+%   \end{array}
+%   \right]
+%\]
+%----------------------------------------------------------------------
+%\end{verbatim}
+
+\[
+   f(x)
+   =
+   \left\{
+   \begin{array}{lll}
+   0 & \mbox{als} & x \leq 0 \\
+   \frac{b^n}{\Gamma (p)} x^{p-1} e^{-bx} & \mbox{als} & x > 0
+   \end{array}
+   \right.
+   \hspace{1cm}\mbox{of}\hspace{1cm}
+   f(x)
+   =
+   \left\{
+   \begin{array}{lll}
+   0 & \mbox{als} & x \leq 0 \\
+   {\displaystyle \frac{b^n}{\Gamma (p)} x^{p-1} e^{-bx} }
+     & \mbox{als} & x > 0
+   \end{array}
+   \right.
+\]
+
+\[
+   A
+   =
+   \left[
+   \begin{array}{cccc}
+   a_{11} & a_{12} & \cdots & a_{1n} \\
+   a_{21} & a_{22} & \cdots & a_{2n} \\
+   \vdots & \vdots & \ddots & \vdots \\
+   a_{m1} & a_{m2} & \cdots & a_{mn}
+   \end{array}
+   \right]
+\]
+
+%======================================================================
+%\newpage
+
+%\begin{verbatim}
+%----------------------------------------------------------------------
+%\[
+%   {^{55}_{25} Mn} + {^2_1 H} \,\rightarrow\,
+%   {^{55}_{26} Fe} + 2 \,{^1_0 n}
+%   \hspace{1cm}\mbox{of}\hspace{1cm}
+%   {^{55}_{25} \mbox{Mn}} + {^2_1 \mbox{H}} \,\rightarrow\,
+%   {^{55}_{26} \mbox{Fe}} + 2 \,{^1_0 n}
+%\]
+%
+%\[
+%   \frac{d}{dt} \frac{\partial L}{\partial \dot{q}_k} -
+%   \frac{\partial L}{\partial q_k} 
+%   = \alpha_k
+%\]
+%----------------------------------------------------------------------
+%\end{verbatim}
+
+\[
+   {^{55}_{25} Mn} + {^2_1 H} \,\rightarrow\,
+   {^{55}_{26} Fe} + 2 \,{^1_0 n}
+   \hspace{1cm}\mbox{of}\hspace{1cm}
+   {^{55}_{25} \mbox{Mn}} + {^2_1 \mbox{H}} \,\rightarrow\,
+   {^{55}_{26} \mbox{Fe}} + 2 \,{^1_0 n}
+\]
+
+\[
+   \frac{d}{dt} \frac{\partial L}{\partial \dot{q}_k} -
+   \frac{\partial L}{\partial q_k} 
+   = \alpha_k
+\]
+
+%======================================================================
+%\newpage
+
+%\begin{verbatim}
+%----------------------------------------------------------------------
+%\begin{eqnarray*}
+%   Ei(x) 
+%   &=&
+%   \int_{-\infty}^{x} \frac{e^u}{u} \,du \\
+%   &=&
+%   \gamma + \ln x + \frac{x}{1 \cdot 1!} +
+%                    \frac{x^2}{2 \cdot 2!} + 
+%                    \frac{x^3}{3 \cdot 3!} + \cdots \\
+%   &\sim&
+%   \frac{e^x}{x} \left[
+%   1 + \frac{1!}{x} + \frac{2!}{x^2} + \frac{3!}{x^3} + \cdots \right]
+%   \hspace{1cm}
+%   (x \rightarrow \infty)
+%\end{eqnarray*}
+%   
+%\[
+%   - \, \frac{h^2}{8 \pi^2 m} 
+%   \frac{\partial^2 \Psi (x,t)}{\partial x^2} +
+%   V(x) \Psi(x,t)
+%   =
+%   - \, \frac{h}{2 \pi i}
+%   \frac{\partial \Psi(x,t)}{\partial t}
+%   \hspace{1cm}
+%   \mbox{(E. Schr\"odinger, 1926)}
+%\]
+%----------------------------------------------------------------------
+%\end{verbatim}
+
+\begin{eqnarray*}
+   Ei(x) 
+   &=&
+   \int_{-\infty}^{x} \frac{e^u}{u} \,du \\
+   &=&
+   \gamma + \ln x + \frac{x}{1 \cdot 1!} +
+                    \frac{x^2}{2 \cdot 2!} + 
+                    \frac{x^3}{3 \cdot 3!} + \cdots \\
+   &\sim&
+   \frac{e^x}{x} \left[
+   1 + \frac{1!}{x} + \frac{2!}{x^2} + \frac{3!}{x^3} + \cdots \right]
+   \hspace{1cm}
+   (x \rightarrow \infty)
+\end{eqnarray*}
+   
+\[
+   - \, \frac{h^2}{8 \pi^2 m} 
+   \frac{\partial^2 \Psi (x,t)}{\partial x^2} +
+   V(x) \Psi(x,t)
+   =
+   - \, \frac{h}{2 \pi i}
+   \frac{\partial \Psi(x,t)}{\partial t}
+   \hspace{1cm}
+   \mbox{(E. Schr\"odinger, 1926)}
+\]
+
+%**********************************************************************

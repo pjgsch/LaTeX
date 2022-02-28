@@ -1,0 +1,118 @@
+%**********************************************************************
+%======================================================================
+%== in preamble =======================================================
+% \documentclass[10pt,xcolor=svgnames,t]{beamer} 
+% \usepackage{beamerarticle} 
+% \mode<presentation>{\setbeamertemplate{navigation symbols}{}} 
+% \mode<presentation>{\usetheme{Boadilla}} 
+% \mode<article>{\usepackage{a4full}} 
+% \usepackage{pgfpages} 
+% \pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=8mm] 
+% \usepackage[absolute,overlay]{textpos} 
+%======================================================================
+%== beamer start ======================================================
+% \mode<article>{\pagestyle{empty}}
+% \mode<article>{\renewcommand{\REP}[1]{}}
+% \mode<article>{\renewcommand{%
+%                \frametitle}[1]{}}%
+%%                \frametitle}[1]{\rule{0.95\textwidth}{0.1mm}}}%
+% \mode<article>{\renewcommand{\ART}[1]{#1}\renewcommand{\BMR}[1]{}}
+% \mode<presentation>{\renewcommand{\ART}[1]{}}
+% \mode<presentation>{\renewcommand{\BMR}[1]{#1}}
+% \mode<presentation>{\renewcommand{\FBX}{\MBX}}
+%== beamer end ========================================================
+%======================================================================
+%\newcommand{}{}
+%======================================================================
+\title[]{This is the Title}
+\subtitle[]{This is the Subtitle}
+\author[P. Schreurs]{Piet Schreurs}
+\institute[TU/e]{
+  Department of Mechanical Engineering\\
+  Eindhoven University of Technology\\
+  \texttt{http://www.mate.tue.nl/$\sim$piet}
+}
+\date[]{\today}
+%======================================================================
+\begin{frame}[plain]
+  \titlepage
+\vfill
+\begin{center}
+{\small \today}
+\end{center}
+\end{frame}
+%======================================================================
+\title[]{}
+\subtitle[]{}
+\author[Piet Schreurs]{}
+\institute[TU/e]{}
+\date[]{}
+%======================================================================
+\begin{frame}
+\frametitle{Sheet 1}
+
+FIRST
+
+\end{frame}
+%======================================================================
+\begin{frame}
+\frametitle{Sheet 2}
+
+SECOND
+
+\end{frame}
+%======================================================================
+\begin{frame}
+\HBX{Sheet 3}
+
+THIRD
+
+\end{frame}
+%======================================================================
+\begin{frame}
+\frametitle{Use of 'block'}
+
+This is a formula :
+
+\begin{block}{}
+\[
+   x = \frac{\sin(y)}{\sqrt{3}}
+\]
+\[
+   x = \frac{\sin(y)}{\sqrt{3}}
+\]
+\end{block}
+
+\pause
+
+\begin{block}{again}
+\[
+   x = \frac{\sin(y)}{\sqrt{3}}
+\]
+\end{block}
+
+\end{frame}
+%======================================================================
+\begin{frame}
+\frametitle{Columns}
+
+\begin{columns}
+\begin{column}[t]{0.45\textwidth}
+This is the text which has to be located in the first column
+\end{column}
+\begin{column}[t]{0.45\textwidth}
+And this is a formule :
+
+\[
+   x = \frac{\sin(y)}{\sqrt{3}}
+\]
+
+which is placed in the second column
+\end{column}
+\end{columns}
+
+~\\~\\
+This is normal layout again
+
+\end{frame}
+%======================================================================

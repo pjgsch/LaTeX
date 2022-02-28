@@ -1,0 +1,112 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \input{texbas.inp}
+%========================================
+% For use with macro style files
+%
+% \documentclass[11pt,a4paper]{book}  %,fleqn
+% \usepackage{\MYTEXDIR/texbks}                   
+% \documentclass[11pt,a4paper]{article}   % ,fleqn
+% \usepackage{\MYTEXDIR/texart}                    
+% \documentclass[10pt,xcolor=svgnames,t]{beamer}
+% \usepackage{\MYTEXDIR/texbmr}
+% \documentclass[a4paper,12pt]{letter}
+%========================================
+ \documentclass[11pt,a4paper]{article}   % ,fleqn   % => art,brf,doc,txt
+% \documentclass[11pt,a4paper]{book}    % ,fleqn   % => bks
+% \documentclass[10pt,xcolor=svgnames,t]{beamer}   % => bmr
+% \documentclass[a4paper,12pt]{letter}             % => let
+%========================================
+ \usepackage{tikz}
+ \usepackage{pgfplots}
+ \pgfplotsset{compat=1.17}
+%========================================          
+ \usepackage[english]{babel}                      % => art,bks,bmr,let,doc
+% \usepackage[dutch]{babel}
+ \usepackage{\MYTEXDIR/a4wide}                    % => art,bks,let,doc
+ \usepackage{longtable}                           % => art,doc
+% \usepackage{\MYTEXDIR/epic,\MYTEXDIR/eepic}      % => art,bks,bmr
+% \usepackage{epsf}                                % => art,bks,bmr
+ \usepackage{epsfig}                              % => art,bks,bmr
+ \usepackage{psfrag}                              % => art,bks,bmr
+ \usepackage{exscale}                             % => art,bks,bmr
+% \usepackage{amssymb}                             % => art
+% \usepackage{amsmath}
+% \usepackage{mathptmx}
+% \usepackage{euler}
+% \usepackage{times}
+% \usepackage{pstricks}
+% \usepackage{rotating}                            % => art,bks,bmr
+% \usepackage{alltt}                               % => art,bks
+ \usepackage{verbatim}                            % => art,bks,bmr,txt
+% \usepackage[usenames]{color}                     % => doc
+% \usepackage[usenames,dvips]{color}               % => art
+% \usepackage[usenames,dvips,monochrome]{color}    % => bks
+% \usepackage{listings,comment}
+% \excludecomment{listing}
+% \usepackage{pdfpages}                            % => doc
+%========================================
+% \usepackage{hyperref}                            % => art,bmr,doc
+% \usepackage[colorlinks=true
+%            ,dvips
+%            ,breaklinks=true
+%            ,urlcolor=blue]{hyperref}             % => bks
+% \hypersetup{ bookmarks = false
+%            ,pdftitle = {educational stuff}
+%            ,pdfborderstyle = {/S/U/W 1}          % {/S/U}
+%            ,pdfborder = 0 0 0 
+%            ,colorlinks = true                    % => doc
+%            ,linkbordercolor = red
+%            ,linkcolor = blue                     % => doc
+%            ,citecolor = blue
+%            ,urlcolor = blue
+%            ,linktoc = page                       % => doc
+% }
+%========================================
+% \usepackage{\MYTEXDIR/a4full}                    % => txt
+% \usepackage{\MYTEXDIR/texmac00}                  % only fonts
+ \usepackage{\MYTEXDIR/texmac0}                     % => art,bks,bmr
+% \usepackage{\MYTEXDIR/texmac}
+% \usepackage{\MYTEXDIR/texfig0}                   % local fig
+ \usepackage{\MYTEXDIR/texfig}                      % global fig   
+%======================================================================
+% \usepackage{\MYTEXDIR/texart0}                   % => art
+% \usepackage{\MYTEXDIR/texbks0}                   % => bks
+% \usepackage{\MYTEXDIR/texbmr0}                   % => bmr
+%========================================
+ \begin{document}
+%========================================
+% No figures
+% \renewcommand{\FIG}[3]%
+%  {\begin{center}\fbox{\bf\color{red}EEPIC FIGURE}\end{center}}
+% \renewcommand{\FIGS}[3]
+%  {\fbox{\bf\color{red}EEPIC FIGURE}}
+% \renewcommand{\includegraphics}[2][]{EPS FIGURE}
+%======================================================================
+ \setlength{\parindent}{0em}                      % => art,bks,let,txt
+% \setlength{\parindent}{1em}                      % => doc
+ \pagenumbering{arabic}                           % => art,bks
+% \pagenumbering{Roman}
+ \pagestyle{empty}
+% \pagestyle{myheadings}                           % => bks
+% \setcounter{page}{0}                             % => bks
+% \setcounter{fignum}{0}
+% \newcommand{\pause}{}                            % => art
+%========================================
+
+ \input{tex.txi}
+% \verbatiminput{tex.txi}
+
+% Possible templates:
+%  tpltxiini.txi : article,beamer,letter,brief,documents
+%  tplart.txi
+%  tplbmr.txi
+%  tplbmr+ind.txi
+%  tplbrief.txi
+%  tplletter.txi
+%  tplnote.txi
+%  tplfig.txi
+%  tplpgfplots.txi : make figures in tex
+
+%========================================
+ \end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

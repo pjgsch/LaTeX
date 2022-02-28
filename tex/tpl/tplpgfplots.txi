@@ -1,0 +1,91 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Basic plotting in LaTeX
+% As an example a data table (x,y) is made in octave
+
+\begin{comment}
+ echo " 
+ clear all 
+ x = 0:(2*pi/100):2*pi; 
+ y = sin(x); 
+ xy = [x' y']; 
+ save -ascii 'xydata.txt' xy 
+ " > xydata.m
+ octave xydata.m
+\end{comment}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{tikzpicture}
+  \begin{axis}
+    \addplot[color=red]{exp(x)};
+  \end{axis}
+\end{tikzpicture}
+
+%======================================================================
+
+\begin{tikzpicture}
+  \begin{axis}
+    \addplot3[surf]{exp(-x^2-y^2)*x};
+  \end{axis}
+\end{tikzpicture}
+
+%======================================================================
+
+\begin{tikzpicture}
+  \begin{axis}[ 
+    axis lines = left, 
+    xlabel = $x$, 
+    ylabel = {$f(x)$} 
+  ]
+
+    \addplot[ 
+      domain=-10:10, 
+      samples=100, 
+      color=red 
+      ]
+      {x^2 - 2*x - 1};
+
+    \addlegendentry{$x^2 - 2x - 1$}
+
+    \addplot [
+      domain=-10:10, 
+      samples=100, 
+      color=blue,
+    ]
+    {x^2 + 2*x + 1};
+
+    \addlegendentry{$x^2 + 2x + 1$}
+
+  \end{axis}
+\end{tikzpicture}
+
+%======================================================================
+
+%\begin{tikzpicture}
+%  \begin{axis}[ 
+%    grid = both ,
+%    grid style = {line width = .1pt, draw = gray!20} ,
+%%    axis lines = left , 
+%%    axis lines = middle , 
+%    xlabel = $x$ , 
+%    ylabel = $f(x)$ ,
+%    xmin = 0 ,
+%    xmax = 6.28 ,
+%    ]
+%
+%    \pgfplotstableread{xydata.txt}
+%    \datatable
+%
+%    \addplot[
+%%     only marks ,
+%%     mark = * ,
+%%     mark = none ,
+%     color = red ,
+%%     fill = red ,
+%    ]
+%    table from \datatable;
+%
+%  \end{axis}
+%\end{tikzpicture}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

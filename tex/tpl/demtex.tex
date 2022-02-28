@@ -1,0 +1,100 @@
+%========================================
+\input{texbas.inp}
+%**********************************************************************
+% Demo for LaTeX
+%**********************************************************************
+%
+% This is the Preamble.
+% It always starts with '\documentclass', which defines the 'style'.
+% Here we use 'article', with the (default) option '10pt',
+% defining the character size.
+% There are more styles and options, which can be found in \LaTeX\ books.
+%
+% Following '\documentclass', packages can be loaded, which allow
+% the use of special commands.
+% Such packages have the extension .sty and must be available in
+% the \LaTeX\ directory on your computer system.
+% Only a few important packages and their options are shown in this
+% example.
+
+\newcommand{\DEM}{\MYTEXDIR/tpl}
+
+\documentclass[10pt]{article}
+\usepackage[english]{babel}
+
+%======================================================================
+% An empty line would cause LaTeX to make an indentation.
+% The width of this indentation can be specified.
+% Here we say that there must be no indentation at all.
+% This allows us to use empty lines in our input files,
+% which will only generate a new line feed.
+%
+% The pagestyle specifies which headings and footings are used.
+% With the option 'empty' there will be no headings and footings.
+
+\setlength{\parindent}{0em} 
+\pagestyle{empty}
+
+%**********************************************************************
+% The document is started here.
+
+\begin{document}
+%======================================================================
+% 
+% The LaTeX source can be typed here.
+% Although this is general practice, we follow another strategy.
+% File with macros, styles and LaTeX source text are made separately
+% included here with the command 'input'.
+%
+% Such a subdevision can be followed even deeper: input files may
+% again contain other input files.
+% This strategy leads to a clearer structure of documents and to a
+% faster updating.
+% The processing of the source leads to only one package of 'tex.*'
+% files, instead of a bunch of files for each source text.
+% Only relevant files (.ps mostly) may have to be saved under another
+% name.
+% However, generally they are printed on the spot and can be
+% overwritten later on.
+%
+%======================================================================
+% First the tile page is included.
+% Although other pages may have page numbers and other header and
+% footer text, this title page must have not.
+% Also the page must not be seen as a page for the pagenumbering.
+
+\input \DEM/demtit.txi
+\thispagestyle{empty}
+\addtocounter{page}{-1}
+
+%======================================================================
+% The table of contents comes after the title page.
+
+\newpage
+\tableofcontents
+
+%======================================================================
+% Several LaTeX source files are now included.
+% We do not need extra packages.
+% They constitute separate sections in our document, so the
+% '\section' command is included first.
+% Not wanted input can be commented out very easily.
+
+\input \DEM/demlat.txi
+
+\input \DEM/demmat.txi
+
+\input \DEM/dembib.txi
+
+\newpage
+\appendix
+\section{First appendix}  
+\input \DEM/demfnt.txi
+\newpage
+\section{Second appendix} Empty.
+
+%======================================================================
+% The document is ended now.
+
+\end{document}
+%**********************************************************************

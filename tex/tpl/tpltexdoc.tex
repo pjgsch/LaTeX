@@ -1,0 +1,57 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \input{texbas.inp}
+%========================================
+ \documentclass[11pt,a4paper]{article}
+%========================================
+ \usepackage[english]{babel}                    
+ \usepackage{color}
+ \usepackage{hyperref}
+ \hypersetup{
+ colorlinks=true,
+ linktoc=page,
+ linkcolor=blue,
+ }
+ \usepackage{pdfpages}
+ \usepackage{longtable}
+ \usepackage{a4wide}
+%========================================
+ \begin{document}
+%========================================
+ \thispagestyle{empty}
+ \setlength{\parindent}{1em}
+%========================================
+\vspace*{1cm}
+
+\begin{center}
+{\Large 
+Documenten
+~\\~\\~\\
+\today
+
+\vspace*{3cm}
+}
+\end{center}
+
+\noindent
+%========================================
+\newpage
+\hypertarget{index}{}
+
+\tableofcontents
+\thispagestyle{empty}
+%========================================
+\newpage
+\setcounter{page}{1}
+%========================================
+
+\section{Demo LaTeX}
+\includepdf[pages=-]{\MYTEXDIR/doc/demlatex.pdf}
+
+\section{Fonts LaTeX}
+\includepdf[pages=-]{\MYTEXDIR/doc/doc-latex.pdf}
+
+%========================================
+ \end{document}
+%========================================
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+

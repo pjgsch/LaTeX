@@ -1,0 +1,18 @@
+%**********************************************************************
+% Title page
+%**********************************************************************
+
+\vspace*{2cm}
+\begin{center}
+{\Large\bf \LaTeX\ demo file}\\[2\baselineskip]
+Piet Schreurs
+\\
+{\tt p.j.g.schreurs@tue.nl}
+\\[2\baselineskip]
+\today
+\end{center}
+
+\thispagestyle{empty}
+\addtocounter{page}{-1}
+
+%**********************************************************************

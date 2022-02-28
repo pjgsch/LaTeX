@@ -1,0 +1,116 @@
+%**********************************************************************
+% testpage for printing
+%**********************************************************************
+
+\newcommand{\PRT}
+{%
+a b c d e f g h i j k l m n o p q r s t u v w x y z 
+1 2 3 4 5 6 7 8 9 0 
+\dag 
+\ddag      
+\S         
+\copyright 
+\pounds    
+\aa        
+\AA        
+\`{o}      
+\'{e}      
+\^{u}      
+\"{\i}     
+\~{n}      
+\={o}      
+\.{e}      
+\u{o}      
+\v{e}  
+$\div$       
+$\pm$        
+$\ast$       
+$\star$      
+$\leq$       
+$\geq$       
+$\equiv$     
+$\neq$       
+$\ll$        
+$\gg$        
+$\subset$    
+$\emptyset$  
+$\cap$       
+$\cup$       
+$\in$        
+$\imath$     
+$\jmath$     
+$\forall$    
+$\infty$     
+$\exists$    
+$\nabla$         
+}%
+
+%======================================================================
+
+%{\PRT}
+%{\sf \PRT}
+%{\sl \PRT}
+%{\it \PRT}
+%{\tt \PRT}
+%{\bf \PRT}
+%{\sc \PRT}
+%{\em \PRT}
+%{\PRT}
+
+%======================================================================
+
+\rule{\textwidth}{5mm}
+\\
+
+{\tiny
+{\PRT}
+{\sf \PRT}
+{\sl \PRT}
+{\it \PRT}
+{\tt \PRT}
+{\bf \PRT}
+{\sc \PRT}
+{\em \PRT}
+{\PRT}
+}
+
+{\small
+{\PRT}
+{\sf \PRT}
+{\sl \PRT}
+{\it \PRT}
+{\tt \PRT}
+{\bf \PRT}
+{\sc \PRT}
+{\em \PRT}
+{\PRT}
+}
+
+{\large
+{\PRT}
+{\sf \PRT}
+{\sl \PRT}
+{\it \PRT}
+{\tt \PRT}
+{\bf \PRT}
+{\sc \PRT}
+{\em \PRT}
+{\PRT}
+}
+
+%{\Large
+%{\PRT}
+%{\sf \PRT}
+%{\sl \PRT}
+%{\it \PRT}
+%{\tt \PRT}
+%{\bf \PRT}
+%{\sc \PRT}
+%{\em \PRT}
+%{\PRT}
+%}
+
+~\\
+\rule{\textwidth}{5mm}
+
+%**********************************************************************

@@ -1,0 +1,58 @@
+%**********************************************************************
+%
+% \documentclass[a4paper,12pt]{article}
+% \usepackage{a4wide}
+% \usepackage[dutch]{babel}
+% \begin{document}
+% \setlength{\parindent}{0em}
+% \pagestyle{empty}
+%
+% \input tplbrief.txi
+%
+% \end{document}
+%
+%======================================================================
+\hfill
+\begin{minipage}{0.3\textwidth}
+P.J.G. Schreurs \\ Gesseltweg 9 \\ 6089NT, Heibloem
+\end{minipage}
+~\\~\\
+
+\begin{minipage}{0.9\textwidth}
+Aan : 
+\\ naam \\ straat, postcode, plaats
+~\\~\\~\\
+\end{minipage}
+
+\hfill
+\begin{minipage}{0.3\textwidth}
+PLAATS \\ DATUM
+\end{minipage}
+~\\~\\
+
+Geachte Mevrouw/Mijnheer,
+~\\
+
+xxxxxx
+~\\~\\
+
+Bij voorbaat dank.
+~\\~\\
+
+\hspace*{0.3\textwidth}
+\begin{minipage}{0.5\textwidth}
+Met vriendelijke groet,
+~\\~\\~\\~\\~\\
+NAAM
+\end{minipage}
+
+\vfill
+\begin{minipage}{0.8\textwidth}
+Cc: 
+\end{minipage}
+
+\begin{minipage}{0.8\textwidth}
+Bijlagen: 
+\end{minipage}
+
+%**********************************************************************
