@@ -28,6 +28,15 @@ Run 'textry.sh' and see what happens.
 Hopefully you end up with a file 'tex.ps' and/or 'tex.pdf', which 
 you can view in a document viewer.
 
+You may have noticed that there are macro's defined to facilitate
+the typesetting.
+An example: 'texmac.sty', 'texmac0.sty' and 'texmac00.sty' define
+much, lesser and the least macro's for my purposes.
+The macro's in 'texfig.sty' and 'texfig0.sty' define the location
+of figures, which, on my laptop at least, were located in various
+directories.
+
+
 Succes and have fun.
 
 </pre>
