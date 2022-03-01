@@ -5,9 +5,9 @@
 \vspace*{2cm}
 \begin{center}
 {\Large\bf \LaTeX\ demo file}\\[2\baselineskip]
-Piet Schreurs
+pjgsch-github
 \\
-{\tt p.j.g.schreurs@tue.nl}
+{\tt pjgsch-email}
 \\[2\baselineskip]
 \today
 \end{center}
