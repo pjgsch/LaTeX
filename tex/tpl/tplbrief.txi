@@ -14,7 +14,7 @@
 %======================================================================
 \hfill
 \begin{minipage}{0.3\textwidth}
-P.J.G. Schreurs \\ Gesseltweg 9 \\ 6089NT, Heibloem
+NAAM \\ STRAAT HUISNR \\ POSTCODE, PLAATS
 \end{minipage}
 ~\\~\\
 

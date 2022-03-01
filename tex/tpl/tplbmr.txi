@@ -26,11 +26,11 @@
 %======================================================================
 \title[]{This is the Title}
 \subtitle[]{This is the Subtitle}
-\author[P. Schreurs]{Piet Schreurs}
+\author[The author]{Author name}
 \institute[TU/e]{
   Department of Mechanical Engineering\\
   Eindhoven University of Technology\\
-  \texttt{http://www.mate.tue.nl/$\sim$piet}
+  \texttt{http://website-of-the-author}
 }
 \date[]{\today}
 %======================================================================
@@ -44,7 +44,7 @@
 %======================================================================
 \title[]{}
 \subtitle[]{}
-\author[Piet Schreurs]{}
+\author[Author name]{}
 \institute[TU/e]{}
 \date[]{}
 %======================================================================
