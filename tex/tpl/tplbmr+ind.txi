@@ -5,11 +5,11 @@
 %======================================================================
 \title[]{#1}
 %\subtitle[]{}
-%\author[P. Schreurs]{Piet Schreurs}
+%\author[The Author]{Author name}
 %\institute[EUT]{
 %  Department of Mechanical Engineering\\
 %  Eindhoven University of Technology\\
-%  \texttt{http://www.mate.tue.nl/$\sim$piet}
+%  \texttt{http://website-of-the-author}
 %}
 \date[]{}
 %======================================================================
