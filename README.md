@@ -13,7 +13,7 @@ be installed (or ignored).
 In this repository you will find :
 
   style files              in 'tex/' 
-  template files           in 'tex/tpl' 
+  template files           in 'tex/tpl/' 
   some documentation       in 'tex/doc/'
 
 In the root diretory you find the script files 'texini.sh'
