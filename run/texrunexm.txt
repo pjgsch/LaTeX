@@ -1,0 +1,33 @@
+######################################################################
+#### Examples for testing
+
+ /bin/cp $MYTEXDIR/tpl/demtex.tex tex.tex
+ $mylatex tex && $mybibtex tex && $mylatex tex && $mybibtex tex && $mylatex tex
+ $mydvips tex && $myps2pdf tex.ps tex.pdf 
+
+ /bin/cp $MYTEXDIR/tpl/tpltextex.tex tex.tex
+ /bin/cp $MYTEXDIR/tpl/tplart.txi tex.txi
+ $mylatex tex && $mydvips tex && $myps2pdf tex.ps tex.pdf 
+
+ /bin/cp $MYTEXDIR/tpl/tpltextxt.tex tex.tex
+ /bin/cp $MYTEXDIR/adm/texhlp.txt tex.txi
+ $mypdflatex tex
+
+ /bin/cp $MYTEXDIR/tpl/tpltexcls.tex tex.tex
+ /bin/cp $MYTEXDIR/tpl/tplbmr.txi tex.txi
+ $mylatex tex && $mydvips tex && $myps2pdf tex.ps tex.pdf 
+
+ /bin/cp $MYTEXDIR/tpl/tplbrief.tex tex.tex
+ $mylatex tex && $mydvips tex && $myps2pdf tex.ps tex.pdf 
+
+ /bin/cp $MYTEXDIR/tpl/tplletter.tex tex.tex
+ $mylatex tex && $mydvips tex && $myps2pdf tex.ps tex.pdf 
+
+ /bin/cp $MYTEXDIR/tpl/tpltexmac.tex tex.tex
+ /bin/cp $MYTEXDIR/tpl/tplpgfplots.txi tex.txi
+ $mylatex tex && $mydvips tex && $myps2pdf tex.ps tex.pdf 
+
+ /bin/cp $MYTEXDIR/tpl/tpltexdoc.tex tex.tex
+ $mypdflatex tex
+
+######################################################################
